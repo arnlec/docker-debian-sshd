@@ -6,7 +6,7 @@ RUN apt-get -y install openssh-server apt-utils sudo
 RUN mkdir /var/run/sshd
 
 RUN adduser ansible
-RUN echo "%sudo ansible=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+RUN echo "ansible ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN mkdir /home/ansible/.ssh
 RUN chown ansible:ansible /home/ansible/.ssh
 RUN chmod 700 /home/ansible/.ssh

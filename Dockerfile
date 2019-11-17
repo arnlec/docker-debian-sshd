@@ -7,9 +7,9 @@ RUN mkdir /var/run/sshd
 
 RUN adduser ansible
 RUN echo "%sudo ansible=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-RUN mkdir /home/ansible/.sshd
-RUN chown ansible:ansible /home/ansible/.sshd
-RUN chmod 700 /home/ansible/.sshd
+RUN mkdir /home/ansible/.ssh
+RUN chown ansible:ansible /home/ansible/.ssh
+RUN chmod 700 /home/ansible/.ssh
 
 EXPOSE 22
 

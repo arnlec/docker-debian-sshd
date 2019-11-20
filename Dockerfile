@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 
 USER root
 RUN apt-get -y update

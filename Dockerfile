@@ -2,7 +2,7 @@ FROM debian:jessie
 
 USER root
 RUN apt-get -y update
-RUN apt-get -y install openssh-server apt-utils sudo
+RUN apt-get -y install openssh-server apt-utils sudo python
 RUN mkdir /var/run/sshd
 
 RUN adduser ansible
